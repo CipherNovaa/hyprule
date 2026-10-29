@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "monitor": "HDMI-A-1",
+  "follow_focus": false,
+  "_comment": "hyprule snap config. When a window whose class contains one of a category's keywords lands on the CRT (monitor above), the snap daemon moves it to that category's workspace. Edited by the hyprule app; the daemon hot-reloads on change. Only ever acts on windows already on the CRT, so main-display rules are untouched.",
+  "categories": {
+    "Emulator": {
+      "ws": 11,
+      "keywords": ["duckstation", "pcsx2", "flycast", "redream", "rpcs3", "gzdoom", "zandronum", "dolphin-emu", "mgba", "melonds", "snes9x", "ppsspp", "azahar", "citra", "mednafen", "mupen", "ares"]
+    },
+    "Media": {
+      "ws": 12,
+      "keywords": ["spotify", "deadbeef", "kodi", "codec", "jellyfin"]
+    }
+  }
+}
