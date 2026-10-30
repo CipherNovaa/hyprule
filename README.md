@@ -1,6 +1,6 @@
 # hyprule
 
-A small GTK4 app for Hyprland's Lua config: see where every open window is sent, add or remove `hl.window_rule` entries for it, and rename workspaces in Hyprland and Waybar at once.
+A small, quick app made to ease the Hyprland transition to lua.  GTK4 app for Hyprland's Lua config: see where every open window is sent, add or remove `hl.window_rule` entries for it, and rename workspaces in Hyprland and Waybar at once.
 
 **Status:** working, and used daily by the author on a Lua-config Hyprland build. It is a personal tool made public: it assumes a config laid out one rule per line (see [Assumptions](#assumptions)), and the optional "CRT snap" feature reflects a two-monitor setup. No packaging yet; build from source.
 
@@ -43,7 +43,7 @@ That is more powerful, but there is no tooling yet for it. To send an app to a w
   - It is idempotent (skips windows already on their target workspace, so it cannot loop), reconciles misplaced windows once at start-up, and hot-reloads `snap.json` when its modification time changes.
   - On this Lua build, raw string dispatchers are gone; everything goes through `hyprctl dispatch '<lua>'`.
 
-## Built with AI agents
+## Workflow for this Project
 
 - The app was rebuilt from the ground up with an AI coding agent, working against the author's real `hyprland.lua` and Waybar config rather than a mock.
 - The rule-removal logic was verified standalone by the agent against real rules for several apps (three, two, one and zero matches) before it was wired to the button.
